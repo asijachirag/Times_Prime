@@ -30,14 +30,12 @@ function find(x)
   let split_by_lead=split_by_header[1].match(/<section(.)class(.*?)lead(.*?)>(.*?)<\/section>/g);
   let split_by_secondary=split_by_lead[0].match(/div(.)class[=]secondary(.)>(.*?)<\/article>(.)<\/div>/g);
   let split_by_title1=split_by_secondary[0].match(/<h\d(.*?)title>(.*?)<\/h\d>/g);
- // console.log(a2);
  split_by_title1.forEach(find);
 
   let split_by_spotlight=split_by_header[1].match(/<section(.)class=homepage-module(.)spotlight(.*?)>(.*?)<\/section>/g);
   let split_by_breaking_point=split_by_spotlight[0].match(/<ul(.)class(.*?)breaking(.)point>(.*?)<\/ul>/g);
   let split_by_li=split_by_breaking_point[0].match(/<li((?!show-credit).)*class((?!show-credit).)*item(.)show(.*?)>(.*?)<\/li>/g);
   let split_by_title2=split_by_li[0].match(/<h\d(.*?)title>(.*?)<\/h\d>/g);
- // console.log(b3);
  split_by_title2.forEach(find);
 
   let split_by_topic=split_by_header[1].match(/<section(.)class=homepage-module(.)topic(.*?)>(.*?)<\/section>/g);
